@@ -1,0 +1,149 @@
+/* ============================================================================
+
+  Макет сайта Евклид.
+
+============================================================================ */
+
+
+
+
+
+/* ============================================================================
+    #VAR
+============================================================================ */
+:root {
+  --font-color-black: #333333;
+  --font-color-white: #CACACA;
+}
+
+
+
+
+
+/* ============================================================================
+    #FONTS
+============================================================================ */
+
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('/fonts/montserrat-v21-latin_cyrillic-regular.woff2') format('woff2'),
+       url('/fonts/montserrat-v21-latin_cyrillic-regular.woff') format('woff');
+}
+
+/* montserrat-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('/fonts/montserrat-v21-latin_cyrillic-700.woff2') format('woff2'),
+       url('/fonts/montserrat-v21-latin_cyrillic-700.woff') format('woff');
+}
+
+/* montserrat-600 - latin_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('/fonts/montserrat-v21-latin_cyrillic-600.woff2') format('woff2'),
+       url('/fonts/montserrat-v21-latin_cyrillic-600.woff') format('woff');
+}
+
+/* montserrat-800 - latin_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  src: local(''),
+       url('/fonts/montserrat-v21-latin_cyrillic-800.woff2') format('woff2'),
+       url('/fonts/montserrat-v21-latin_cyrillic-800.woff') format('woff');
+}
+
+
+
+
+
+/* ============================================================================
+    #GENERAL
+============================================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat';
+  font-size: 16px;
+  color: var(--font-color-black);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color-black);
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 75px;
+}
+
+
+
+
+
+/* ============================================================================
+    #HEADER
+============================================================================ */
+
+.header__container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  width: 224px;
+  height: 72px;
+  margin-right: auto;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 85px;
+}
+
+.nav__item {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.nav__link {
+}
+
+.nav__search {
+  margin-left: 85px;
+  background-color: transparent;
+  border: none;
+}
+
+
