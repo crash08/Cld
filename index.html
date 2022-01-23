@@ -14,8 +14,8 @@
 
   <header class="header">
     <div class="header__container container">
-      <a href="/index.html" class="logo">
-        <img src="/img/Logo.svg" alt="Логотип компании Евклид" class="logo__img">
+      <a href="/index.html" class="logo_header logo">
+        <img src="/img/Logo.svg" alt="Логотип компании Евклид" class="logo__img_header">
       </a>
       <nav class="nav">
         <ul class="nav__list">
@@ -36,7 +36,8 @@
           </li>
         </ul>
         <button class="nav__search">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="nav__search-img" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <rect width="7.56126" height="1.89031"
               transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333" />
             <path
@@ -81,7 +82,7 @@
           </div>
           <div class="box">
             <div class="box_small">
-              <span class="box__img"></span>
+              <span class="box__img_1 box__img"></span>
               <div class="box__content">
                 <h3 class="box__title">Консультация с широким активом</h3>
                 <p class="box__text">А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для
@@ -89,7 +90,7 @@
               </div>
             </div>
             <div class="box_small">
-              <span class="box__img"></span>
+              <span class="box__img_2 box__img"></span>
               <div class="box__content">
                 <h3 class="box__title">В своём стремлении повысить</h3>
                 <p class="box__text">Качество жизни, они забывают, что сплочённость команды профессионалов представляет
@@ -121,8 +122,8 @@
               освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется,
               призваны к ответу.</p>
             <div class="how__button-wrap">
-              <a href="" class="how__button_1 button">Подробнее</a>
-              <a href="" class="how__button_2 button">Договор</a>
+              <a href="" class="how__button_1 how__button button">Подробнее</a>
+              <a href="" class="how__button_2 how__button button">Договор</a>
             </div>
           </div>
           <div class="how__box how__box_img"></div>
@@ -186,8 +187,8 @@
   <footer class="footer">
     <div class="footer__container container">
       <div class="footer__content">
-        <a href="/index.html" class="footer__logo logo">
-          <img src="/img/Logo-white.svg" alt="Логотип компании Евклид" class="logo__img">
+        <a href="/index.html" class="logo_footer">
+          <img src="/img/Logo-white.svg" alt="Логотип компании Евклид" class="logo__img_footer">
         </a>
         <ul class="footer__nav">
           <li class="footer__item">
@@ -251,13 +252,16 @@
       <div class="footer__content">
         <form action="https://jsonplaceholder.typicode.com/posts" class="form" method="post">
           <h2 class="form__title title">Оставить заявку</h2>
-          <input class="form__input" type="name" name="name" id="name" required placeholder="Фамилия, имя и отчество*">
+          <input class="form__input" type="text" name="fullname" id="name" required
+            placeholder="Фамилия, имя и отчество*">
           <input class="form__input" type="email" name="email" id="email" required placeholder="E-mail*">
           <textarea class="form__text" name="text" id="text" placeholder="Сообщение"></textarea>
           <div class="form__button_wrap">
             <button class="form__button button" type="submit">Отправить данные</button>
-            <input class="form__checkbox" type="checkbox" name="agreement" id="agreement" required>
-            <label for="agreement" class="form_label_checkbox">Согласен на обработку данных</label>
+            <label for="agreement" class="form_label_checkbox">
+              <input class="form__checkbox" type="checkbox" name="agreement" id="agreement" required>
+              Согласен на обработку данных
+            </label>
           </div>
         </form>
       </div>

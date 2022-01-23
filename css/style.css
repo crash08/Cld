@@ -107,8 +107,12 @@ section {
 }
 
 .button {
-  padding: 20px 38px;
   color: white;
+}
+
+.logo {
+  width: 224px;
+  height: 72px;
 }
 
 
@@ -119,16 +123,18 @@ section {
     #HEADER
 ============================================================================ */
 
+.header {
+  position: relative;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
 .header__container {
   height: 100px;
   display: flex;
   align-items: center;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.logo {
-  width: 224px;
-  height: 72px;
+.logo_header {
   margin-right: auto;
 }
 
@@ -138,6 +144,7 @@ section {
 
 .nav__list {
   display: flex;
+  align-items: center;
 }
 
 .nav__item:not(:last-child) {
@@ -150,10 +157,12 @@ section {
 }
 
 .nav__search {
+  display: flex;
   margin-left: 85px;
   background-color: transparent;
   border: none;
 }
+
 
 
 
@@ -177,7 +186,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 100px 85px;
+  padding: 100px 82px;
   font-weight: 700;
   font-size: 24px;
   color: white;
@@ -194,7 +203,8 @@ section {
 }
 
 .hero__button {
-  padding: 25px 38px;
+  padding: 25px 35px;
+  letter-spacing: -0.2px;
   background-color: #FF9900;
 }
 
@@ -241,20 +251,21 @@ section {
 .box__aside {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: auto;
-  padding: 50px 0;
+  padding: 50px;
   font-weight: 700;
   color: white;
   background: rgba(0, 0, 0, 0.5);
 }
 
 .box__aside-text {
-  flex: 0 1 454px;
-  line-height: 2em;
+  flex: 0 1 60%;
+  line-height: 34px;
 }
 
 .box__aside-button {
+  padding: 18px 36px;
   border: 3px solid var(--main-theme-color);
 }
 
@@ -270,7 +281,14 @@ section {
   display: block;
   width: 190px;
   height: 165px;
+}
+
+.box__img_1 {
   background: url(/img/about/about02.svg);
+}
+
+.box__img_2 {
+  background: url(/img/about/about03.svg);
 }
 
 .box__content {
@@ -309,7 +327,7 @@ section {
 }
 
 .how__item:not(:last-child) {
-  margin-right: 85px;
+  margin-right: 86px;
 }
 
 .how__wrapper {
@@ -328,7 +346,7 @@ section {
 }
 
 .how__text {
-  width: 90%;
+  width: 88%;
   margin-bottom: 50px;
   line-height: 2em;
 }
@@ -336,6 +354,10 @@ section {
 .how__button-wrap {
   display: flex;
   align-items: center;
+}
+
+.how__button {
+  padding: 19px 38px;
 }
 
 .how__button_1 {
@@ -363,13 +385,14 @@ section {
 ============================================================================ */
 
 .faq__title {
-  margin-bottom: 32px;
+  line-height: 62px;
+  margin-bottom: 40px;
 }
 
 .faq__item {
   display: flex;
   align-items: center;
-  padding: 40px 0;
+  padding: 30px 0;
   font-weight: 700;
   font-size: 24px;
   border-top: 1px solid #CACACA;
@@ -393,21 +416,27 @@ section {
 
 ============================================================================ */
 
-.footer__container {
-  display: flex;
-  align-items: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  color: var(--font-color-white);
+.footer {
   background-color: #222222;
 }
 
-.footer__content {
-  flex: 0 0 33.33%;
+.footer__container {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: var(--font-color-white);
 }
 
-.footer__logo {
-  margin-bottom: 20px;
+.footer__content {
+  flex: 0 0 33.333%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo_footer {
+  margin-top: -1px;
+  margin-bottom: 14px;
 }
 
 .footer__nav {
@@ -435,6 +464,7 @@ section {
 .form {
   display: flex;
   flex-direction: column;
+  padding: 0 8px 0 12px;
 }
 
 .form__title {
@@ -443,7 +473,7 @@ section {
 
 .form__input {
   height: 60px;
-  padding: 14px 24px;
+  padding: 20px 26px;
   margin-bottom: 25px;
   color: var(--font-color-white);
   background-color: #414141;
@@ -453,7 +483,7 @@ section {
 .form__text {
   height: 150px;
   margin-bottom: 32px;
-  padding: 14px 24px;
+  padding: 20px 26px;
   color: var(--font-color-white);
   background-color: #414141;
   border: none;
@@ -461,25 +491,20 @@ section {
 }
 
 .form__button_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .form__button {
-  margin-right: 22px;
   padding: 19px 52px;
   font-weight: 700;
   background-color: var(--main-theme-color);
   border: none;
 }
 
-.form__checkbox {
-}
-
-.form_label_checkbox {
-}
-
 .footer__text {
-  width: 60%;
-  margin-left: auto;
+  width: 61%;
+  margin: auto 0 auto auto;
   line-height: 2em;
 }
-
