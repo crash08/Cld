@@ -14,7 +14,7 @@
 
   <header class="header">
     <div class="header__container container">
-      <a href="" class="logo">
+      <a href="/index.html" class="logo">
         <img src="/img/Logo.svg" alt="Логотип компании Евклид" class="logo__img">
       </a>
       <nav class="nav">
@@ -49,14 +49,18 @@
   </header>
 
   <main class="main">
-    <div class="container">
-      <section class="hero">
-        <h3 class="hero__title">Проектные решения любой сложности</h3>
-        <p class="hero__text">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются
-          уделом проектантов</p>
-        <a href="" class="hero__button button">Заказать расчёт</a>
-      </section>
-      <section class="about">
+    <section class="hero">
+      <div class="hero__container container">
+        <div class="hero__content">
+          <h3 class="hero__title">Проектные решения любой сложности</h3>
+          <p class="hero__text">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются
+            уделом проектантов</p>
+          <a href="" class="hero__button button">Заказать расчёт</a>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="container">
         <h2 class="about__title title">О нас</h2>
         <p class="about__text">Также как перспективное планирование создаёт необходимость включения в производственный
           план целого ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и
@@ -78,20 +82,26 @@
           <div class="box">
             <div class="box_small">
               <span class="box__img"></span>
-              <h3 class="box__title">Консультация с широким активом</h3>
-              <p class="box__text">А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для
-                как самодостаточных, так и внешне зависимых концептуальных решений.</p>
+              <div class="box__content">
+                <h3 class="box__title">Консультация с широким активом</h3>
+                <p class="box__text">А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для
+                  как самодостаточных, так и внешне зависимых концептуальных решений.</p>
+              </div>
             </div>
             <div class="box_small">
               <span class="box__img"></span>
-              <h3 class="box__title">В своём стремлении повысить</h3>
-              <p class="box__text">Качество жизни, они забывают, что сплочённость команды профессионалов представляет
-                собой интересный эксперимент проверки прогресса профессионального сообщества.</p>
+              <div class="box__content">
+                <h3 class="box__title">В своём стремлении повысить</h3>
+                <p class="box__text">Качество жизни, они забывают, что сплочённость команды профессионалов представляет
+                  собой интересный эксперимент проверки прогресса профессионального сообщества.</p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="how">
+      </div>
+    </section>
+    <section class="how">
+      <div class="container">
         <h2 class="how__title title">Как мы работаем</h2>
         <ul class="how__nav">
           <li class="how__item">1 шаг</li>
@@ -111,31 +121,73 @@
               освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется,
               призваны к ответу.</p>
             <div class="how__button-wrap">
-              <a href="" class="how__button button">Подробнее</a>
-              <a href="" class="how__button button">Договор</a>
+              <a href="" class="how__button_1 button">Подробнее</a>
+              <a href="" class="how__button_2 button">Договор</a>
             </div>
           </div>
           <div class="how__box how__box_img"></div>
         </div>
-      </section>
-      <section class="faq">
+      </div>
+    </section>
+    <section class="faq">
+      <div class="container">
         <h2 class="faq__title title">Часто задаваемые вопросы</h2>
         <ul class="faq__list">
-          <li class="faq__item">Из чего формируется конечная стоимость проекта?</li>
-          <li class="faq__item">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</li>
-          <li class="faq__item">Я выбираю между разными компаниями. В чём ваше отличие?</li>
-          <li class="faq__item">Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?</li>
-          <li class="faq__item">Могу ли я вернуть деньги на каком-либо из этапов работ?</li>
+          <li class="faq__item">
+            <p class="faq__section">Из чего формируется конечная стоимость проекта?</p>
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                fill="#666666" />
+            </svg>
+          </li>
+          <li class="faq__item">
+            <p class="faq__section">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</p>
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                fill="#666666" />
+            </svg>
+          </li>
+          <li class="faq__item">
+            <p class="faq__section">Я выбираю между разными компаниями. В чём ваше отличие?</p>
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                fill="#666666" />
+            </svg>
+          </li>
+          <li class="faq__item">
+            <p class="faq__section">Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?</p>
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                fill="#666666" />
+            </svg>
+          </li>
+          <li class="faq__item">
+            <p class="faq__section">Могу ли я вернуть деньги на каком-либо из этапов работ?</p>
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                fill="#666666" />
+            </svg>
+          </li>
         </ul>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
+    <div class="footer__container container">
       <div class="footer__content">
-        <a href="" class="logo">
-          <img src="/img/Logo.svg" alt="Логотип компании Евклид" class="logo__img">
+        <a href="/index.html" class="footer__logo logo">
+          <img src="/img/Logo-white.svg" alt="Логотип компании Евклид" class="logo__img">
         </a>
         <ul class="footer__nav">
           <li class="footer__item">
@@ -197,14 +249,14 @@
         </ul>
       </div>
       <div class="footer__content">
-        <form action="" class="form" method="post">
+        <form action="https://jsonplaceholder.typicode.com/posts" class="form" method="post">
           <h2 class="form__title title">Оставить заявку</h2>
           <input class="form__input" type="name" name="name" id="name" required placeholder="Фамилия, имя и отчество*">
           <input class="form__input" type="email" name="email" id="email" required placeholder="E-mail*">
-          <input class="form__input" type="text" name="text" id="text" placeholder="Сообщение">
+          <textarea class="form__text" name="text" id="text" placeholder="Сообщение"></textarea>
           <div class="form__button_wrap">
             <button class="form__button button" type="submit">Отправить данные</button>
-            <input class="form__checkbox" type="checkbox" name="agreement" id="agreement">
+            <input class="form__checkbox" type="checkbox" name="agreement" id="agreement" required>
             <label for="agreement" class="form_label_checkbox">Согласен на обработку данных</label>
           </div>
         </form>

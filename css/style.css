@@ -11,9 +11,12 @@
 /* ============================================================================
     #VAR
 ============================================================================ */
+
 :root {
   --font-color-black: #333333;
   --font-color-white: #CACACA;
+  --main-theme-color: #FF9900;
+  --gap: 32px;
 }
 
 
@@ -93,10 +96,19 @@ a {
   color: var(--font-color-black);
 }
 
+section {
+  padding-bottom: 100px;
+}
+
 .container {
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 75px;
+}
+
+.button {
+  padding: 20px 38px;
+  color: white;
 }
 
 
@@ -137,13 +149,337 @@ a {
   font-size: 18px;
 }
 
-.nav__link {
-}
-
 .nav__search {
   margin-left: 85px;
   background-color: transparent;
   border: none;
 }
 
+
+
+
+
+/* ============================================================================
+
+    #MAIN
+
+
+    #HERO
+============================================================================ */
+
+.hero__container {
+  background: url(/img/hero/hero01.jpg) top no-repeat content-box;
+  background-size: cover;
+}
+
+.hero__content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 100px 85px;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+}
+
+.hero__title {
+  font-weight: 800;
+  font-size: 70px;
+  margin-bottom: 24px;
+}
+
+.hero__text {
+  margin-bottom: 90px;
+}
+
+.hero__button {
+  padding: 25px 38px;
+  background-color: #FF9900;
+}
+
+
+
+
+
+/* ============================================================================
+    #ABOUT
+============================================================================ */
+
+.about__title {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.about__text {
+  width: 70%;
+  line-height: 2em;
+  margin-bottom: 50px;
+}
+
+.box__wrapper {
+  display: flex;
+  gap: var(--gap);
+}
+
+.box_big {
+  background: url(/img/about/about01.jpg) no-repeat;
+  background-size: cover;
+}
+
+.box {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.box__aside {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: auto;
+  padding: 50px 0;
+  font-weight: 700;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.box__aside-text {
+  flex: 0 1 454px;
+  line-height: 2em;
+}
+
+.box__aside-button {
+  border: 3px solid var(--main-theme-color);
+}
+
+.box_small {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 65px 60px;
+  border: 1px solid #CACACA;
+}
+
+.box__img {
+  display: block;
+  width: 190px;
+  height: 165px;
+  background: url(/img/about/about02.svg);
+}
+
+.box__content {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  }
+
+.box__title {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.box__text {
+  width: 90%;
+  line-height: 2em;
+}
+
+
+
+
+
+/* ============================================================================
+    #HOW
+============================================================================ */
+
+.how__title {
+  margin-bottom: 50px;
+}
+
+.how__nav {
+  display: flex;
+  margin-bottom: 45px;
+  font-size: 18px;
+}
+
+.how__item:not(:last-child) {
+  margin-right: 85px;
+}
+
+.how__wrapper {
+  display: flex;
+  gap: var(--gap);
+}
+
+.how__box {
+  flex: 1 1 50%;
+}
+
+.how__subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.how__text {
+  width: 90%;
+  margin-bottom: 50px;
+  line-height: 2em;
+}
+
+.how__button-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.how__button_1 {
+  margin-right: 32px;
+  font-weight: 700;
+  background-color: var(--main-theme-color);
+}
+
+.how__button_2 {
+  color: var(--font-color-black);
+  border: 1px solid var(--font-color-black);
+}
+
+.how__box_img {
+  background: url(/img/how/how01.jpg) no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+/* ============================================================================
+    #FAQ
+============================================================================ */
+
+.faq__title {
+  margin-bottom: 32px;
+}
+
+.faq__item {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  font-weight: 700;
+  font-size: 24px;
+  border-top: 1px solid #CACACA;
+}
+
+.faq__section {
+  margin-right: auto;
+}
+
+.faq__item:last-child {
+  border-bottom: 1px solid #CACACA;
+}
+
+
+
+
+
+/* ============================================================================
+
+    #FOOTER
+
+============================================================================ */
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: var(--font-color-white);
+  background-color: #222222;
+}
+
+.footer__content {
+  flex: 0 0 33.33%;
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+}
+
+.footer__nav {
+  margin-bottom: 90px;
+}
+
+.footer__item {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 2em;
+}
+
+.footer__link {
+  color: var(--font-color-white);
+}
+
+.socials {
+  display: flex;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__title {
+  margin-bottom: 25px;
+}
+
+.form__input {
+  height: 60px;
+  padding: 14px 24px;
+  margin-bottom: 25px;
+  color: var(--font-color-white);
+  background-color: #414141;
+  border: none;
+}
+
+.form__text {
+  height: 150px;
+  margin-bottom: 32px;
+  padding: 14px 24px;
+  color: var(--font-color-white);
+  background-color: #414141;
+  border: none;
+  resize: none;
+}
+
+.form__button_wrap {
+}
+
+.form__button {
+  margin-right: 22px;
+  padding: 19px 52px;
+  font-weight: 700;
+  background-color: var(--main-theme-color);
+  border: none;
+}
+
+.form__checkbox {
+}
+
+.form_label_checkbox {
+}
+
+.footer__text {
+  width: 60%;
+  margin-left: auto;
+  line-height: 2em;
+}
 
