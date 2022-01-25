@@ -1,0 +1,262 @@
+/* ============================================================================
+    #VAR
+============================================================================ */
+
+:root {
+  --font-color-black: #333333;
+  --font-color-white: #CACACA;
+  --main-theme-color: #FF9900;
+  --active-color: #E1670E;
+  --focus-color: #F7B045;
+}
+
+
+
+
+
+/* ============================================================================
+    #
+============================================================================ */
+.nav__link {
+  transition: border-bottom 0.3s ease, transform 0.2s ease, outline 0.3s ease;
+}
+
+.nav__link:hover {
+  border-bottom: 2px solid var(--main-theme-color);
+}
+
+.nav__link:focus {
+  outline: 2px solid var(--main-theme-color);
+}
+
+.nav__link:active {
+  color: var(--active-color);
+  border-bottom: 2px solid var(--active-color);
+}
+
+
+
+
+
+.nav__search-img {
+  transition: outline 0.2s ease;
+}
+
+.nav__search-img path {
+  transition: stroke 0.2s ease;
+}
+
+.nav__search-img rect {
+  transition: fill 0.2s ease;
+}
+
+.nav__search:hover .nav__search-img path,
+.nav__search:active .nav__search-img path {
+  stroke: var(--main-theme-color);
+}
+
+.nav__search:hover .nav__search-img rect,
+.nav__search:active .nav__search-img rect {
+  fill: var(--main-theme-color);
+}
+
+.nav__search:focus .nav__search-img {
+  outline: 2px solid var(--main-theme-color);
+}
+
+.nav__search:focus {
+  outline: none;
+}
+
+
+
+
+
+.hero__button {
+  transition: background-color 0.2s ease;
+}
+
+.hero__button:hover,
+.hero__button:focus {
+  background-color: rgba(255, 153, 0, 0.7);
+}
+
+.hero__button:active {
+  background-color: var(--active-color);
+}
+
+
+
+
+
+.box__aside-button {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.box__aside-button:hover,
+.box__aside-button:focus {
+  background-color: var(--main-theme-color);
+}
+
+.box__aside-button:active {
+  background-color: var(--active-color);
+  border-color: var(--active-color);
+}
+
+
+
+
+
+.how__link {
+  transition: color 0.2s ease, outline 0.2s ease;
+}
+
+.how__link:hover {
+  color: var(--main-theme-color);
+}
+
+.how__link:focus {
+  outline: 2px solid var(--main-theme-color);
+}
+
+.how__link:active {
+  color: var(--active-color);
+}
+
+
+
+
+
+.how__button_1,
+.form__button {
+  transition: background-color 0.2s ease;
+}
+
+.how__button_2 {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+
+
+.how__button_1:hover,
+.how__button_1:focus,
+.form__button:hover,
+.form__button:focus {
+  background-color: var(--focus-color);
+}
+
+.how__button_1:active,
+.form__button:active {
+  background-color: var(--active-color);
+}
+
+.how__button_2:hover,
+.how__button_2:focus {
+  color: white;
+  background-color: #666666;
+  border-color: #666666;
+}
+
+.how__button_2:active {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+
+
+
+
+
+.footer__link {
+  transition: color 0.2s ease, outline 0.2s ease;
+}
+
+.footer__link:hover {
+  color: var(--main-theme-color);
+}
+
+.footer__link:focus {
+  outline: 2px solid var(--main-theme-color);
+}
+
+.footer__link:active {
+  color: var(--active-color);
+}
+
+
+
+
+
+.form__input {
+  transition: background-color 0.2s ease;
+}
+
+.form__input:hover,
+.form__input:focus {
+  background-color: #666666;
+  outline: none;
+}
+
+
+
+
+
+.socials__link svg path {
+  transition: fill 0.2s ease;
+}
+
+.socials__link:hover svg path {
+  fill: var(--main-theme-color)
+}
+
+.socials__link:focus {
+  outline: 2px solid var(--main-theme-color);
+}
+
+.socials__link:active svg path {
+  fill: var(--active-color)
+}
+
+
+
+
+
+.faq__section {
+  transition: color 0.2s ease;
+}
+
+.faq__section svg path {
+  transition: stroke 0.2s ease, transform 0.2s ease;
+}
+
+.faq__section svg ellipse {
+  transition: fill 0.2s ease;
+}
+
+
+.faq__section:hover,
+.faq__section:focus {
+  color: var(--main-theme-color);
+}
+
+.faq__section:hover svg ellipse {
+  fill: var(--main-theme-color);
+}
+
+.faq__section:hover svg path {
+  stroke: white;
+}
+
+.faq__section:focus svg ellipse {
+  fill: var(--main-theme-color);
+}
+
+.faq__section:focus svg path {
+  stroke: white;
+}
+
+.faq__section:active svg path {
+  transform: rotate(45deg);
+}
+
+

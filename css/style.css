@@ -16,6 +16,7 @@
   --font-color-black: #333333;
   --font-color-white: #CACACA;
   --main-theme-color: #FF9900;
+  --active-color: #E1670E;
   --gap: 32px;
 }
 
@@ -79,6 +80,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border-color: transparent;
+  outline-color: transparent;
 }
 
 body {
@@ -156,13 +159,22 @@ section {
   font-size: 18px;
 }
 
+.nav__link {
+  padding-bottom: 5px;
+  outline-offset: 5px;
+}
+
 .nav__search {
   display: flex;
   margin-left: 85px;
+  padding: 22px 0;
   background-color: transparent;
   border: none;
 }
 
+.nav__search-img {
+  outline-offset: 5px;
+}
 
 
 
@@ -330,6 +342,14 @@ section {
   margin-right: 86px;
 }
 
+.how__link {
+  outline-offset: 5px;
+}
+
+.how__link_isactive {
+  color: var(--main-theme-color);
+}
+
 .how__wrapper {
   display: flex;
   gap: var(--gap);
@@ -362,6 +382,7 @@ section {
 
 .how__button_1 {
   margin-right: 32px;
+  padding: 20px 38px;
   font-weight: 700;
   background-color: var(--main-theme-color);
 }
@@ -399,8 +420,17 @@ section {
 }
 
 .faq__section {
-  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.faq__item svg path {
+  transform-origin: center;
+}
+
 
 .faq__item:last-child {
   border-bottom: 1px solid #CACACA;
@@ -441,6 +471,7 @@ section {
 
 .footer__nav {
   margin-bottom: 90px;
+  cursor: pointer;
 }
 
 .footer__item {
@@ -451,20 +482,28 @@ section {
 
 .footer__link {
   color: var(--font-color-white);
+  outline-offset: 5px;
 }
 
 .socials {
   display: flex;
+  cursor: pointer;
 }
 
 .socials__item:not(:last-child) {
   margin-right: 25px;
 }
 
+.socials__link {
+  display: block;
+  outline-offset: 5px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
   padding: 0 8px 0 12px;
+  cursor: text;
 }
 
 .form__title {
@@ -472,21 +511,24 @@ section {
 }
 
 .form__input {
-  height: 60px;
   padding: 20px 26px;
-  margin-bottom: 25px;
-  color: var(--font-color-white);
+  color: white;
   background-color: #414141;
   border: none;
 }
 
-.form__text {
+.form__input::placeholder {
+  color: var(--font-color-white);
+}
+
+.form__input:not(.form__input[name="text"]) {
+  height: 60px;
+  margin-bottom: 25px;
+}
+
+.form__input[name="text"] {
   height: 150px;
   margin-bottom: 32px;
-  padding: 20px 26px;
-  color: var(--font-color-white);
-  background-color: #414141;
-  border: none;
   resize: none;
 }
 
@@ -501,6 +543,12 @@ section {
   font-weight: 700;
   background-color: var(--main-theme-color);
   border: none;
+  cursor: pointer;
+}
+
+.form_label_checkbox {
+  padding: 19px 0;
+  cursor: pointer;
 }
 
 .footer__text {
