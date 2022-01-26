@@ -363,13 +363,21 @@ section {
   color: var(--main-theme-color);
 }
 
-.how__wrapper {
+.how__sec {
   display: flex;
   gap: var(--gap);
 }
 
+.how__sec_2,
+.how__sec_3,
+.how__sec_4 {
+  display: none;
+}
+
 .how__box {
   flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .how__subtitle {
@@ -387,6 +395,7 @@ section {
 .how__button-wrap {
   display: flex;
   align-items: center;
+  margin-top: auto;
 }
 
 .how__button {
@@ -434,7 +443,7 @@ section {
 
 .faq__item {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   padding: 30px 0;
   border-top: 1px solid #CACACA;
 }
@@ -444,21 +453,23 @@ section {
 }
 
 .faq__link {
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.faq__text {
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
 }
 
-.faq__item svg path {
+.faq__link svg {
+  margin-left: auto;
+}
+
+.faq__link svg path {
   transform-origin: center;
+}
+
+.faq__desc {
+  display: none;
 }
 
 
@@ -671,7 +682,7 @@ section {
   .faq__title {
     margin-bottom: 32px;
   }
-  .faq__text {
+  .faq__name {
     width: 80%;
     font-size: 20px;
   }
@@ -749,7 +760,7 @@ section {
   .how__nav {
     justify-content: space-between;
   }
-  .how__wrapper {
+  .how__sec {
     flex-direction: column;
     gap: 38px;
   }
@@ -763,7 +774,7 @@ section {
   .how__box:nth-child(1) {
     order: 2;
   }
-  .faq__text {
+  .faq__name {
     width: 86%;
   }
   .footer__nav {
@@ -889,7 +900,7 @@ section {
     margin-bottom: 16px;
     font-size: 14px;
   }
-  .how__wrapper {
+  .how__sec {
     gap: 20px;
   }
   .how__box_img {
@@ -922,7 +933,7 @@ section {
     width: 30px;
     height: 30px;
   }
-  .faq__text {
+  .faq__name {
     width: 80%;
     font-weight: 500;
     font-size: 14px;
