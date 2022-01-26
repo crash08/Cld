@@ -15,38 +15,44 @@
 
   <header class="header">
     <div class="header__container container">
-      <a href="/index.html" class="logo_header logo">
-        <img src="/img/Logo.svg" alt="Логотип компании Евклид" class="logo__img_header">
+      <button class="burger">
+        <svg width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="30" height="3" fill="#333333" />
+          <rect y="10" width="30" height="3" fill="#333333" />
+          <rect y="20" width="30" height="3" fill="#333333" />
+        </svg>
+      </button>
+      <a href="/index.html" class="header__logo">
+        <img src="/img/Logo.svg" alt="Логотип компании Евклид">
       </a>
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="" class="nav__link">О нас</a>
+            <a href="#about" class="nav__link">О нас</a>
           </li>
           <li class="nav__item">
             <a href="" class="nav__link">Проекты</a>
           </li>
           <li class="nav__item">
-            <a href="" class="nav__link">Этапы</a>
+            <a href="#how" class="nav__link">Этапы</a>
           </li>
           <li class="nav__item">
             <a href="" class="nav__link">Отзывы</a>
           </li>
           <li class="nav__item">
-            <a href="" class="nav__link">Контакты</a>
+            <a href="#footer" class="nav__link">Контакты</a>
           </li>
         </ul>
-        <button class="nav__search">
-          <svg class="nav__search-img" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <rect width="7.56126" height="1.89031"
-              transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333" />
-            <path
-              d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
-              stroke="#333333" stroke-width="2" />
-          </svg>
-        </button>
       </nav>
+      <button class="search">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="7.56126" height="1.89031"
+            transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333" />
+          <path
+            d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
+            stroke="#333333" stroke-width="2" />
+        </svg>
+      </button>
     </div>
   </header>
 
@@ -61,7 +67,7 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <h2 class="about__title title">О нас</h2>
         <p class="about__text">Также как перспективное планирование создаёт необходимость включения в производственный
@@ -102,7 +108,7 @@
         </div>
       </div>
     </section>
-    <section class="how">
+    <section class="how" id="how">
       <div class="container">
         <h2 class="how__title title">Как мы работаем</h2>
         <ul class="how__nav">
@@ -144,7 +150,8 @@
         <h2 class="faq__title title">Часто задаваемые вопросы</h2>
         <ul class="faq__list">
           <li class="faq__item">
-            <a href="" class="faq__section">Из чего формируется конечная стоимость проекта?
+            <a href="" class="faq__link">
+              <p class="faq__text">Из чего формируется конечная стоимость проекта?</p>
               <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -154,7 +161,8 @@
             </a>
           </li>
           <li class="faq__item">
-            <a href="" class="faq__section">У меня есть свой проект. Сможем ли мы его доработать / реализовать?
+            <a href="" class="faq__link">
+              <p class="faq__text">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</p>
               <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -164,7 +172,8 @@
             </a>
           </li>
           <li class="faq__item">
-            <a href="" class="faq__section">Я выбираю между разными компаниями. В чём ваше отличие?
+            <a href="" class="faq__link">
+              <p class="faq__text">Я выбираю между разными компаниями. В чём ваше отличие?</p>
               <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -174,8 +183,9 @@
             </a>
           </li>
           <li class="faq__item">
-            <a href="" class="faq__section">Могу ли я делегировать вам работу / согласование с подрядчиком /
-              организацией?
+            <a href="" class="faq__link">
+              <p class="faq__text">Могу ли я делегировать вам работу / согласование с подрядчиком /
+                организацией?</p>
               <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -185,7 +195,8 @@
             </a>
           </li>
           <li class="faq__item">
-            <a href="" class="faq__section">Могу ли я вернуть деньги на каком-либо из этапов работ?
+            <a href="" class="faq__link">
+              <p class="faq__text">Могу ли я вернуть деньги на каком-либо из этапов работ?</p>
               <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -199,11 +210,11 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="footer__container container">
       <div class="footer__content">
-        <a href="/index.html" class="logo_footer">
-          <img src="/img/Logo-white.svg" alt="Логотип компании Евклид" class="logo__img_footer">
+        <a href="/index.html" class="footer__logo">
+          <img src="/img/Logo-white.svg" alt="Логотип компании Евклид">
         </a>
         <ul class="footer__nav">
           <li class="footer__item">

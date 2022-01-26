@@ -38,33 +38,33 @@
 
 
 
-.nav__search-img {
+.search svg {
   transition: outline 0.2s ease;
 }
 
-.nav__search-img path {
+.search svg path {
   transition: stroke 0.2s ease;
 }
 
-.nav__search-img rect {
+.search svg rect {
   transition: fill 0.2s ease;
 }
 
-.nav__search:hover .nav__search-img path,
-.nav__search:active .nav__search-img path {
+.search:hover svg path,
+.search:active svg path {
   stroke: var(--main-theme-color);
 }
 
-.nav__search:hover .nav__search-img rect,
-.nav__search:active .nav__search-img rect {
+.search:hover svg rect,
+.search:active svg rect {
   fill: var(--main-theme-color);
 }
 
-.nav__search:focus .nav__search-img {
+.search:focus svg {
   outline: 2px solid var(--main-theme-color);
 }
 
-.nav__search:focus {
+.search:focus {
   outline: none;
 }
 
@@ -221,41 +221,41 @@
 
 
 
-.faq__section {
+.faq__link {
   transition: color 0.2s ease;
 }
 
-.faq__section svg path {
+.faq__link svg path {
   transition: stroke 0.2s ease, transform 0.2s ease;
 }
 
-.faq__section svg ellipse {
+.faq__link svg ellipse {
   transition: fill 0.2s ease;
 }
 
 
-.faq__section:hover,
-.faq__section:focus {
+.faq__link:hover,
+.faq__link:focus {
   color: var(--main-theme-color);
 }
 
-.faq__section:hover svg ellipse {
+.faq__link:hover svg ellipse {
   fill: var(--main-theme-color);
 }
 
-.faq__section:hover svg path {
+.faq__link:hover svg path {
   stroke: white;
 }
 
-.faq__section:focus svg ellipse {
+.faq__link:focus svg ellipse {
   fill: var(--main-theme-color);
 }
 
-.faq__section:focus svg path {
+.faq__link:focus svg path {
   stroke: white;
 }
 
-.faq__section:active svg path {
+.faq__link:active svg path {
   transform: rotate(45deg);
 }
 
