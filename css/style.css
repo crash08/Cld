@@ -80,6 +80,10 @@
   outline-color: transparent;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -91,7 +95,7 @@ ul {
 }
 
 a {
-  display: block;
+  display: inline-block;
   text-decoration: none;
   color: var(--font-color-black);
 }
@@ -105,6 +109,12 @@ section {
   margin: 0 auto;
   padding-left: 75px;
   padding-right: 75px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58.5px;
 }
 
 .button {
@@ -200,9 +210,6 @@ section {
   width: 100%;
   height: var(--hero-height);
 }
-.swiper-pagination-bullet {
-
-}
 
 .hero__img img {
   width: 100%;
@@ -253,7 +260,7 @@ section {
 }
 
 .hero__button {
-  padding: 25px 35px;
+  padding: 25px 37px;
   letter-spacing: -0.2px;
   background-color: #FF9900;
   pointer-events: auto;
@@ -269,12 +276,6 @@ section {
 
 .about__title {
   margin-bottom: 20px;
-  line-height: 1;
-}
-
-.title {
-  font-weight: 400;
-  font-size: 48px;
 }
 
 .about__text {
@@ -335,7 +336,7 @@ section {
   display: flex;
   align-items: center;
   gap: 50px;
-  padding: 65px 60px;
+  padding: 64px 60px;
   border: 1px solid #CACACA;
 }
 
@@ -368,33 +369,34 @@ section {
   margin-bottom: 50px;
 }
 
-.how__nav {
+.tabs {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 46px;
   font-size: 18px;
 }
 
-.how__item:not(:last-child) {
-  margin-right: 86px;
+.tabs__item:not(:last-child) {
+  margin-right: 82px;
 }
 
-.how__link {
+.tabs__button {
+  color: var(--font-color-black);
+  background-color: transparent;
   outline-offset: 5px;
+  cursor: pointer;
 }
 
-.how__link_isactive {
+.tabs__button_active {
   color: var(--main-theme-color);
 }
 
-.how__sec {
-  display: flex;
+.how__tab {
+  display: none;
   gap: var(--gap);
 }
 
-.how__sec_2,
-.how__sec_3,
-.how__sec_4 {
-  display: none;
+.how__tab_active {
+  display: flex;
 }
 
 .how__box {
@@ -437,6 +439,10 @@ section {
   border: 1px solid var(--font-color-black);
 }
 
+.how__box {
+  min-height: 460px;
+}
+
 .how__box_img {
   position: relative;
 }
@@ -460,39 +466,53 @@ section {
 ============================================================================ */
 
 .faq__title {
-  line-height: 62px;
+  line-height: 61px;
   margin-bottom: 40px;
 }
 
 .faq__item {
-  display: flex;
-  flex-direction: column;
   padding: 30px 0;
   border-top: 1px solid #CACACA;
+  cursor: pointer;
 }
 
 .faq__item:last-child {
   border-bottom: 1px solid #CACACA;
 }
 
-.faq__link {
+.faq__name-wrap {
   display: flex;
   align-items: center;
+}
+
+.faq__name {
+  display: inline-block;
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
 }
 
-.faq__link svg {
+.faq__item svg {
+  flex-shrink: 0;
   margin-left: auto;
 }
 
-.faq__link svg path {
+.faq__item svg path {
   transform-origin: center;
+}
+
+.faq__item_active svg path {
+  transform: rotate(45deg);
 }
 
 .faq__desc {
   display: none;
+  width: 1000px;
+  line-height: 2em;
+}
+
+.faq__desc_active {
+  display: block;
 }
 
 
@@ -525,7 +545,7 @@ section {
 
 .footer__logo {
   margin-top: -1px;
-  margin-bottom: 14px;
+  margin-bottom: 17px;
 }
 
 .footer__nav {
@@ -637,7 +657,8 @@ section {
     margin-top: 438px;
   }
   .box_small {
-    padding: 65px 77px;
+    padding-left: 77px;
+    padding-right: 77px;
   }
   .how__text {
     margin-bottom: 25px;
@@ -706,6 +727,9 @@ section {
     width: 80%;
     font-size: 20px;
   }
+  .faq__desc {
+    width: 80%;
+  }
   .footer__content:nth-child(1) {
     flex-basis: 40%;
   }
@@ -747,6 +771,30 @@ section {
   .hero__button {
     margin-top: 52px;
   }
+  .about__title {
+    margin-bottom: 10px;
+  }
+  .about__text {
+    margin-bottom: 64px;
+  }
+  .box__aside {
+    margin-top: 411px;
+  }
+  .box__small {
+    padding: 64px 60px;
+  }
+  .box__aside-button {
+    padding: 17px 35px;
+  }
+  .how__title {
+    margin-bottom: 50px;
+  }
+  .tabs {
+    margin-bottom: 50px;
+  }
+  .how__tab {
+    gap: 50px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -777,14 +825,14 @@ section {
     margin-top: 48px;
   }
   .box__aside {
-    margin-top: 465px;
+    margin-top: 419px;
     padding: 34px 40px;
   }
   .box__aside-text {
     flex-basis: 62%;
   }
   .box_small {
-    padding: 34px 45px 34px 40px;
+    padding: 34px 34px 34px 38px;
     gap: 16px;
   }
   .box__content {
@@ -797,17 +845,22 @@ section {
   .box__text {
     width: 100%;
   }
-  .how__item:not(:last-child) {
+  .how__subtitle {
+    margin-bottom: 12px;
+  }
+  .tabs__item:not(:last-child) {
     margin: 0;
   }
-  .how__nav {
+  .tabs {
     justify-content: space-between;
+    margin-bottom: 47px;
   }
-  .how__sec {
+  .how__tab {
     flex-direction: column;
     gap: 38px;
   }
   .how__box {
+    min-height: auto;
     flex-basis: auto;
   }
   .how__box_img {
@@ -817,7 +870,13 @@ section {
   .how__box:nth-child(1) {
     order: 2;
   }
+  .faq__title {
+    line-height: 58.5px;
+  }
   .faq__name {
+    width: 86%;
+  }
+  .faq__desc {
     width: 86%;
   }
   .footer__nav {
@@ -876,12 +935,12 @@ section {
   }
   .title {
     font-size: 24px;
-    line-height: 30px;
+    line-height: 28px;
   }
   .button {
     font-size: 12px;
     line-height: 14px;
-    padding: 13px 30px;
+    padding: 13px 31px;
   }
   .swiper {
     height: var(--hero-height);
@@ -906,8 +965,11 @@ section {
   .hero__button {
     margin-top: 33px;
   }
+  .about__title {
+    margin-bottom: 20px;
+  }
   .about__text {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   .box {
     gap: 0;
@@ -951,11 +1013,11 @@ section {
   .how__title {
     margin-bottom: 20px;
   }
-  .how__nav {
+  .tabs {
     margin-bottom: 16px;
     font-size: 14px;
   }
-  .how__sec {
+  .how__tab {
     gap: 20px;
   }
   .how__box_img {
@@ -982,24 +1044,24 @@ section {
     flex: 1 1;
   }
   .faq__title {
-    margin-bottom: 13px;
+    margin-bottom: 16px;
   }
-  .faq__link svg {
+  .faq__item svg {
     width: 30px;
     height: 30px;
   }
   .faq__name {
-    width: 80%;
-    font-weight: 500;
+    width: 85%;
+    font-weight: 600;
     font-size: 14px;
     line-height: 24px;
   }
   .footer__container {
     padding-top: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 28px;
   }
   .form__title {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
   .form__input {
     padding: 20px;
@@ -1014,6 +1076,15 @@ section {
   }
   .form__button {
     margin-right: 0;
+    padding: 13px 28px;
+  }
+  .form_label_checkbox {
+    padding-top: 19px;
+    padding-bottom: 23px;
+  }
+  .footer__logo {
+    margin-top: 0;
+    margin-bottom: 12px;
   }
   .footer__logo img {
     width: 131px;

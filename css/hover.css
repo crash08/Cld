@@ -107,19 +107,19 @@
 
 
 
-.how__link {
+.tabs__button {
   transition: color 0.2s ease, outline 0.2s ease;
 }
 
-.how__link:hover {
+.tabs__button:hover {
   color: var(--main-theme-color);
 }
 
-.how__link:focus {
+.tabs__button:focus {
   outline: 2px solid var(--main-theme-color);
 }
 
-.how__link:active {
+.tabs__button:active {
   color: var(--active-color);
 }
 
@@ -221,42 +221,38 @@
 
 
 
-.faq__link {
+.faq__name {
   transition: color 0.2s ease;
 }
 
-.faq__link svg path {
+.faq__item svg path {
   transition: stroke 0.2s ease, transform 0.2s ease;
 }
 
-.faq__link svg ellipse {
+.faq__item svg ellipse {
   transition: fill 0.2s ease;
 }
 
 
-.faq__link:hover,
-.faq__link:focus {
+.faq__item:hover .faq__name,
+.faq__item:focus .faq__name {
   color: var(--main-theme-color);
 }
 
-.faq__link:hover svg ellipse {
+.faq__item:hover svg ellipse {
   fill: var(--main-theme-color);
 }
 
-.faq__link:hover svg path {
+.faq__item:hover svg path {
   stroke: white;
 }
 
-.faq__link:focus svg ellipse {
+.faq__item:focus svg ellipse {
   fill: var(--main-theme-color);
 }
 
-.faq__link:focus svg path {
+.faq__item:focus svg path {
   stroke: white;
-}
-
-.faq__link:active svg path {
-  transform: rotate(45deg);
 }
 
 
