@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/hover.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -59,19 +60,51 @@
   <main class="main">
     <section class="hero">
       <div class="hero__container container">
-        <picture class="hero__img">
-          <source media="(max-width: 320px)" srcset="img/hero/01/320.jpg">
-          <source media="(max-width: 768px)" srcset="img/hero/01/768.jpg">
-          <source media="(max-width: 1024px)" srcset="img/hero/01/1024.jpg">
-          <source media="(max-width: 1920px)" srcset="img/hero/01/1920.jpg">
-          <source media="(min-width: 1920px)" srcset="img/hero/01/2x.jpg">
-          <img src="img/hero/01/1920.jpg" alt="Фоновое изображение">
-        </picture>
         <div class="hero__content">
-          <h3 class="hero__title">Проектные решения любой сложности</h3>
-          <p class="hero__text">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются
-            уделом проектантов</p>
-          <a href="" class="hero__button button">Заказать расчёт</a>
+          <div class="hero__text-wrap">
+            <h3 class="hero__title">Проектные решения любой сложности</h3>
+            <p class="hero__text">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день
+              остаются
+              уделом проектантов</p>
+          </div>
+          <div class="hero__button-wrap">
+            <a href="" class="hero__button button">Заказать расчёт</a>
+          </div>
+        </div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture class="hero__img">
+                <source media="(max-width: 320px)" srcset="img/hero/01/320.jpg">
+                <source media="(max-width: 768px)" srcset="img/hero/01/768.jpg">
+                <source media="(max-width: 1024px)" srcset="img/hero/01/1024.jpg">
+                <source media="(max-width: 1920px)" srcset="img/hero/01/1920.jpg">
+                <source media="(min-width: 1920px)" srcset="img/hero/01/2x.jpg">
+                <img src="img/hero/01/1920.jpg" alt="Фоновое изображение">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="hero__img">
+                <source media="(max-width: 320px)" srcset="img/hero/02/320.jpg">
+                <source media="(max-width: 768px)" srcset="img/hero/02/768.jpg">
+                <source media="(max-width: 1024px)" srcset="img/hero/02/1024.jpg">
+                <source media="(max-width: 1920px)" srcset="img/hero/02/1920.jpg">
+                <source media="(min-width: 1920px)" srcset="img/hero/02/2x.jpg">
+                <img src="img/hero/02/1920.jpg" alt="Фоновое изображение">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="hero__img">
+                <source media="(max-width: 320px)" srcset="img/hero/03/320.jpg">
+                <source media="(max-width: 768px)" srcset="img/hero/03/768.jpg">
+                <source media="(max-width: 1024px)" srcset="img/hero/03/1024.jpg">
+                <source media="(max-width: 1920px)" srcset="img/hero/03/1920.jpg">
+                <source media="(min-width: 1920px)" srcset="img/hero/03/2x.jpg">
+                <img src="img/hero/03/1920.jpg" alt="Фоновое изображение">
+              </picture>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -413,6 +446,9 @@
       </div>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
 </body>
 
 </html>
