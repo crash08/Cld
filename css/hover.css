@@ -227,39 +227,63 @@
 
 
 
-
-.faq__name {
-  transition: color 0.2s ease;
+.faq__button {
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.faq__item svg path {
+.faq__button svg path {
   transition: stroke 0.2s ease, transform 0.2s ease;
 }
 
-.faq__item svg ellipse {
+.faq__button svg ellipse {
   transition: fill 0.2s ease;
 }
 
+.faq__desc {
+  transition: max-height 0.4s ease, padding-bottom 0.5s ease;
+}
 
-.faq__item:hover .faq__name,
-.faq__item:focus .faq__name {
+.faq__desc.active {
+transition-delay: 0.3s;
+}
+
+.faq__button:hover,
+.faq__button:focus {
+  border-top-color: var(--main-theme-color);
+}
+
+.faq__button:hover ~ .faq__button:not(.faq__button:hover ~ .faq__button ~ .faq__button),
+.faq__button:focus ~ .faq__button:not(.faq__button:focus ~ .faq__button ~ .faq__button) {
+  border-top-color: var(--main-theme-color);
+}
+
+.faq__button:last-of-type:hover ~ .faq__desc-wrap {
+  border-bottom-color: var(--main-theme-color);
+}
+
+.faq__button:hover,
+.faq__button:focus {
   color: var(--main-theme-color);
+  outline: none;
 }
 
-.faq__item:hover svg ellipse {
+.faq__button:hover svg ellipse {
   fill: var(--main-theme-color);
 }
 
-.faq__item:hover svg path {
+.faq__button:hover svg path {
   stroke: white;
 }
 
-.faq__item:focus svg ellipse {
+.faq__button:focus svg ellipse {
   fill: var(--main-theme-color);
 }
 
-.faq__item:focus svg path {
+.faq__button:focus svg path {
   stroke: white;
 }
 
+.faq__button.active svg path {
+  transform: rotate(45deg);
+}
 

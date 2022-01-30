@@ -9,42 +9,44 @@ window.addEventListener('DOMContentLoaded', function () {
       //Присваевает константе "path" значение переменной "data-path" эелемента, по которому кликнули
       const path = event.currentTarget.dataset.path;
 
-      //Выбирет все элементы с классом "tabs__button" и удаляет у них класс "tabs__button_active"
+      //Выбирет все элементы с классом "tabs__button" и удаляет у них класс "active"
       document.querySelectorAll('.tabs__button').forEach(function (tabsButton) {
-        tabsButton.classList.remove('tabs__button_active');
+        tabsButton.classList.remove('active');
       })
 
-      //Выбирет все элементы с классом "how__tab" и удаляет у них класс "how__tab_active"
+      //Выбирет все элементы с классом "how__tab" и удаляет у них класс "active"
       document.querySelectorAll('.how__tab').forEach(function (howTab) {
-        howTab.classList.remove('how__tab_active');
+        howTab.classList.remove('active');
       })
 
-      //Добавляет элементу tabsButton класс "tabs__button_active"
-      tabsButton.classList.add('tabs__button_active');
+      //Добавляет элементу tabsButton класс "active"
+      tabsButton.classList.add('active');
 
-      //Выбирет элемент по значению переменной "path" и добавляет к нему класс "how__tab_active"
-      document.querySelector(`[data-target="${path}"]`).classList.add('how__tab_active');
+      //Выбирет элемент по значению переменной "path" и добавляет к нему класс "active"
+      document.querySelector(`[data-target="${path}"]`).classList.add('active');
     })
   })
 
   //FAQ ACCORDION =============================================================
-  document.querySelectorAll('.faq__item').forEach(function (faqItem) {
-    faqItem.addEventListener('click', function (event) {
+  document.querySelectorAll('.faq__button').forEach(function (faqButton) {
+    faqButton.addEventListener('click', function (event) {
       const faq = event.currentTarget.dataset.faq;
 
-      if (faqItem.classList.contains('faq__item_active')) {
-        faqItem.classList.remove('faq__item_active');
-        document.querySelector(`[data-elem="${faq}"]`).classList.remove('faq__desc_active');
+      if (faqButton.classList.contains('active')) {
+        faqButton.classList.remove('active');
+        document.querySelector(`[data-elem="${faq}"]`).classList.remove('active');
+        faqButton.blur();
       }
       else {
-        document.querySelectorAll('.faq__item').forEach(function (faqItem) {
-          faqItem.classList.remove('faq__item_active');
+        document.querySelectorAll('.faq__button').forEach(function (faqButton) {
+          faqButton.classList.remove('active');
         })
         document.querySelectorAll('.faq__desc').forEach(function (faqDesc) {
-          faqDesc.classList.remove('faq__desc_active');
+          faqDesc.classList.remove('active');
         })
-        faqItem.classList.add('faq__item_active');
-        document.querySelector(`[data-elem="${faq}"]`).classList.add('faq__desc_active');
+        faqButton.classList.add('active');
+        document.querySelector(`[data-elem="${faq}"]`).classList.add('active');
+        faqButton.blur();
       }
     })
   })
