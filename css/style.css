@@ -519,6 +519,15 @@ img, svg {
   margin-bottom: 40px;
 }
 
+.faq__item {
+  border-top: 1px solid #CACACA;
+  color: var(--font-color-black);
+}
+
+.faq__item:last-child {
+  border-bottom: 1px solid #CACACA;
+}
+
 .faq__button {
   display: flex;
   align-items: center;
@@ -531,7 +540,6 @@ img, svg {
   color: var(--font-color-black);
   background: transparent;
   border: none;
-  border-top: 1px solid #CACACA;
   cursor: pointer;
 }
 
@@ -551,10 +559,6 @@ img, svg {
   padding-bottom: 0px;
   line-height: 2em;
   overflow: hidden;
-}
-
-.faq__desc-wrap:last-of-type {
-  border-bottom: 1px solid #CACACA;
 }
 
 .faq__desc.active {
@@ -588,6 +592,14 @@ img, svg {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.footer__content:nth-child(1) {
+  align-items: flex-start;
+}
+
+.footer__content:nth-child(3) {
+  align-items: flex-end;
 }
 
 .footer__logo {
@@ -680,7 +692,7 @@ img, svg {
 
 .footer__text {
   width: 61%;
-  margin: auto 0 auto auto;
+  margin: auto 0;
   line-height: 2em;
 }
 
@@ -1188,7 +1200,7 @@ img, svg {
   .faq__title {
     margin-bottom: 16px;
   }
-  .faq__item svg {
+  .faq__button svg {
     width: 30px;
     height: 30px;
   }

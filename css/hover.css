@@ -227,8 +227,12 @@
 
 
 
+.faq__item {
+  transition: border-color 0.2s ease;
+}
+
 .faq__button {
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .faq__button svg path {
@@ -247,17 +251,12 @@
 transition-delay: 0.3s;
 }
 
-.faq__button:hover,
-.faq__button:focus {
+.faq__item:hover,
+.faq__item:hover + .faq__item {
   border-top-color: var(--main-theme-color);
 }
 
-.faq__button:hover ~ .faq__button:not(.faq__button:hover ~ .faq__button ~ .faq__button),
-.faq__button:focus ~ .faq__button:not(.faq__button:focus ~ .faq__button ~ .faq__button) {
-  border-top-color: var(--main-theme-color);
-}
-
-.faq__button:last-of-type:hover ~ .faq__desc-wrap {
+.faq__item:last-child:hover {
   border-bottom-color: var(--main-theme-color);
 }
 

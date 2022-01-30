@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', function () {
       if (faqButton.classList.contains('active')) {
         faqButton.classList.remove('active');
         document.querySelector(`[data-elem="${faq}"]`).classList.remove('active');
-        faqButton.blur();
+        //faqButton.blur();
       }
       else {
         document.querySelectorAll('.faq__button').forEach(function (faqButton) {
@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', function () {
         })
         faqButton.classList.add('active');
         document.querySelector(`[data-elem="${faq}"]`).classList.add('active');
-        faqButton.blur();
+        //faqButton.blur();
       }
     })
   })
