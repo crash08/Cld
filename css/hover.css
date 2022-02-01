@@ -15,8 +15,26 @@
 
 
 /* ============================================================================
+    #RESET
+============================================================================ */
+button:focus,
+
+a:focus {
+  outline: none;
+}
+
+
+
+
+
+/* ============================================================================
     #
 ============================================================================ */
+.header__logo:focus,
+.footer__logo:focus {
+  outline: 2px solid var(--main-theme-color);
+}
+
 .nav__link {
   transition: color 0.2s ease;
 }
@@ -44,10 +62,6 @@
 
 
 
-
-.search svg {
-  transition: outline 0.2s ease;
-}
 
 .search svg path {
   transition: stroke 0.2s ease;
@@ -115,7 +129,7 @@
 
 
 .tabs__button {
-  transition: color 0.2s ease, outline 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .tabs__button:hover {
@@ -175,7 +189,7 @@
 
 
 .footer__link {
-  transition: color 0.2s ease, outline 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .footer__link:hover {
