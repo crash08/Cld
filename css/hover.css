@@ -63,22 +63,12 @@ a:focus {
 
 
 
-.search svg path {
-  transition: stroke 0.2s ease;
+.search:hover {
+  color: var(--main-theme-color);
 }
 
-.search svg rect {
-  transition: fill 0.2s ease;
-}
-
-.search:hover svg path,
-.search:active svg path {
-  stroke: var(--main-theme-color);
-}
-
-.search:hover svg rect,
-.search:active svg rect {
-  fill: var(--main-theme-color);
+.search:active {
+  color: var(--main-theme-color);
 }
 
 .search:focus svg {
@@ -222,24 +212,6 @@ a:focus {
 
 
 
-.socials__link svg path {
-  transition: fill 0.2s ease;
-}
-
-.socials__link:hover svg path {
-  fill: var(--main-theme-color)
-}
-
-.socials__link:focus {
-  outline: 2px solid var(--main-theme-color);
-}
-
-.socials__link:active svg path {
-  fill: var(--active-color)
-}
-
-
-
 
 .faq__item {
   transition: border-color 0.2s ease;
@@ -250,7 +222,7 @@ a:focus {
 }
 
 .faq__button svg path {
-  transition: stroke 0.2s ease, transform 0.2s ease;
+  transition: fill 0.2s ease, transform 0.2s ease;
 }
 
 .faq__button svg ellipse {
@@ -285,7 +257,7 @@ transition-delay: 0.3s;
 }
 
 .faq__button:hover svg path {
-  stroke: white;
+  fill: white;
 }
 
 .faq__button:focus svg ellipse {
@@ -293,7 +265,7 @@ transition-delay: 0.3s;
 }
 
 .faq__button:focus svg path {
-  stroke: white;
+  fill: white;
 }
 
 .faq__button.active svg path {

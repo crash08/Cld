@@ -224,15 +224,24 @@ img, svg {
 .search {
   margin-left: 85px;
   padding: 22px 0;
+  color: var(--font-color-black);
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: color 0.2s ease;
 }
 
 .search svg {
   outline-offset: 5px;
 }
 
+.search svg rect {
+  fill: currentColor;
+}
+
+.search svg path {
+  stroke: currentColor;
+}
 
 
 
@@ -290,7 +299,11 @@ img, svg {
   justify-content: flex-end;
 }
 
-.hero__title {
+.hero__title,
+.hero__title2
+{
+  margin: 0;
+  display: inline;
   font-weight: 800;
   font-size: 70px;
 }
@@ -331,7 +344,7 @@ img, svg {
   margin-bottom: 50px;
 }
 
-.box__wrapper {
+.box-wrapper {
   display: flex;
   gap: var(--gap);
 }
@@ -379,7 +392,7 @@ img, svg {
   border: 3px solid var(--main-theme-color);
 }
 
-.box_small {
+.box__box-small {
   display: flex;
   align-items: center;
   gap: 50px;
@@ -636,7 +649,25 @@ img, svg {
 
 .socials__link {
   display: block;
+  color: #7C7C7C;
   outline-offset: 5px;
+  transition: color 0.2s ease;
+}
+
+.socials__link svg path {
+  fill: currentColor;
+}
+
+.socials__link:hover {
+  color: var(--main-theme-color);
+}
+
+.socials__link:active {
+  color: var(--main-theme-color);
+}
+
+.socials__link:focus {
+  outline: 2px solid var(--main-theme-color);
 }
 
 .form {
@@ -673,7 +704,7 @@ img, svg {
   resize: none;
 }
 
-.form__button_wrap {
+.form__button-wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -688,7 +719,7 @@ img, svg {
   cursor: pointer;
 }
 
-.form_label_checkbox {
+.form__checkbox-label {
   position: relative;
   display: flex;
   align-items: center;
@@ -742,13 +773,13 @@ img, svg {
   .about__text {
     width: 90%;
   }
-  .box__wrapper {
+  .box-wrapper {
     flex-direction: column;
   }
   .box__aside {
     margin-top: 438px;
   }
-  .box_small {
+  .box__box-small {
     padding-left: 77px;
     padding-right: 77px;
   }
@@ -787,7 +818,9 @@ img, svg {
     padding-left: 127px;
     padding-right: 127px;
   }
-  .hero__title {
+  .hero__title,
+  .hero__title2
+  {
     font-size: 60px;
   }
   .hero__text {
@@ -831,6 +864,11 @@ img, svg {
   .header__logo,
   .search {
     margin: 0;
+  }
+
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
 
@@ -981,7 +1019,9 @@ img, svg {
   .hero__text-wrap {
     flex-basis: 55%;
   }
-  .hero__title {
+  .hero__title,
+  .hero__title2
+  {
     font-size: 50px;
   }
   .hero__text {
@@ -997,7 +1037,7 @@ img, svg {
   .box__aside-text {
     flex-basis: 62%;
   }
-  .box_small {
+  .box__box-small {
     padding: 34px 34px 34px 38px;
     gap: 16px;
   }
@@ -1070,10 +1110,10 @@ img, svg {
     margin-top: 74%;
     flex-direction: column;
   }
-  .box_small {
+  .box__box-small {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0;
+    padding: 15px;
   }
   .footer__container {
     padding-right: 50px;
@@ -1134,7 +1174,9 @@ img, svg {
   .hero__text-wrap {
     flex-basis: 58%;
   }
-  .hero__title {
+  .hero__title,
+  .hero__title2
+  {
     font-size: 20px;
   }
   .hero__text {
@@ -1173,10 +1215,10 @@ img, svg {
     border-width: 2px;
     color: var(--main-theme-color);
   }
-  .box_small:nth-child(1) {
+  .box__box-small:nth-child(1) {
     margin-bottom: 32px;
   }
-  .box_small {
+  .box__box-small {
     gap: 12px;
     border: none;
   }
@@ -1250,7 +1292,7 @@ img, svg {
   .form__input[name="text"] {
     margin-bottom: 25px;
   }
-  .form__button_wrap {
+  .form__button-wrap {
     flex-direction: column;
     padding: 0 10px;
     border-bottom: 1px solid #595959;
@@ -1259,7 +1301,7 @@ img, svg {
     margin-right: 0;
     padding: 13px 28px;
   }
-  .form_label_checkbox {
+  .form__checkbox-label {
     padding-top: 19px;
     padding-bottom: 23px;
   }

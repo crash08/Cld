@@ -58,7 +58,10 @@
         <div class="hero__container container">
           <div class="hero__content">
             <div class="hero__text-wrap">
-              <h3 class="hero__title">Проектные решения любой сложности</h3>
+              <div class="hero__title-wrap">
+                <h1 class="hero__title">Проектные решения</h1>
+                <div class="hero__title2">любой сложности</div>
+              </div>
               <p class="hero__text">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день
                 остаются
                 уделом проектантов</p>
@@ -117,9 +120,9 @@
             высокую востребованность позиций, занимаемых участниками в отношении поставленных задач. Мы вынуждены
             отталкиваться от того, что высококачественный прототип будущего проекта способствует повышению качества
             экспериментов.</p>
-          <div class="box__wrapper">
-            <div class="box_big box">
-              <picture class="box__img_big">
+          <div class="box-wrapper">
+            <div class="box box_big">
+              <picture class="box__img box__img_big">
                 <source media="(max-width: 320px)" srcset="img/about/01/320.jpg">
                 <source media="(max-width: 768px)" srcset="img/about/01/768.jpg">
                 <source media="(max-width: 1024px)" srcset="img/about/01/1024.jpg">
@@ -135,19 +138,19 @@
               </div>
             </div>
             <div class="box">
-              <div class="box_small">
-                <img class="box__img_small" src="img/about/02.svg" alt="">
+              <div class="box__box-small">
+                <img class="box__img box__img_small" src="img/about/02.svg" alt="">
                 <div class="box__content">
-                  <h3 class="box__title">Консультация с широким активом</h3>
+                  <h4 class="box__title">Консультация с широким активом</h4>
                   <p class="box__text">А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты
                     для
                     как самодостаточных, так и внешне зависимых концептуальных решений.</p>
                 </div>
               </div>
-              <div class="box_small">
-                <img class="box__img_small" src="img/about/03.svg" alt="">
+              <div class="box__box-small">
+                <img class="box__img box__img_small" src="img/about/03.svg" alt="">
                 <div class="box__content">
-                  <h3 class="box__title">В своём стремлении повысить</h3>
+                  <h4 class="box__title">В своём стремлении повысить</h4>
                   <p class="box__text">Качество жизни, они забывают, что сплочённость команды профессионалов
                     представляет
                     собой интересный эксперимент проверки прогресса профессионального сообщества.</p>
@@ -444,7 +447,6 @@
         </div>
       </section>
     </main>
-
     <footer class="footer" id="footer">
       <div class="footer__container container">
         <div class="footer__content">
@@ -519,9 +521,9 @@
               placeholder="Фамилия, имя и отчество*">
             <input class="form__input" type="email" name="email" id="email" required placeholder="E-mail*">
             <textarea class="form__input" name="text" id="text" placeholder="Сообщение"></textarea>
-            <div class="form__button_wrap">
+            <div class="form__button-wrap">
               <button class="form__button button" type="submit">Отправить данные</button>
-              <label for="agreement" class="form_label_checkbox">
+              <label for="agreement" class="form__checkbox-label">
                 <input class="form__checkbox" type="checkbox" name="agreement" id="agreement" required>
                 <span></span>
                 Согласен на обработку данных
